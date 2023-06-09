@@ -1,6 +1,7 @@
+import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
-import { useState } from 'react';
+import { React, useState } from 'react';
 
 const columns = [
 	{ field: 'id', headerName: 'ID', width: 90, flex: 1 },
@@ -101,7 +102,19 @@ const Students = () => {
 				checkboxSelection
 				disableRowSelectionOnClick
 			/>
+			<Button variant="outlined" color="primary" onClick={() => handleSeeMore(row)}>
+              See more
+            </Button>
 		</Box>
+		<Button 
+			color="primary" 
+			variant='contained' 
+			onClick={() =>{
+				console.log("Button Clicked");
+			}}
+		>
+			Add Students
+		</Button>
 		</div>
 	)
 };

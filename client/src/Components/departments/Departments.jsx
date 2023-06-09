@@ -1,3 +1,4 @@
+import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import { useState } from 'react';
@@ -40,6 +41,15 @@ const Departments = () => {
 				disableRowSelectionOnClick
 			/>
 		</Box>
+		<Button 
+			color="primary" 
+			variant='contained' 
+			onClick={() =>{
+				console.log("Button Clicked");
+			}}
+		>
+			Add Department
+		</Button>
 		</div>
 	)
 };
